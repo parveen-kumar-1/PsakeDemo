@@ -1,0 +1,7 @@
+D:\My\OldWork\SainCov\Repo\LinkPrj\Link\Build\bin\Release\Build.dll
+D:\My\OldWork\SainCov\Repo\LinkPrj\Link\Build\bin\Release\Build.pdb
+D:\My\OldWork\SainCov\Repo\LinkPrj\Link\Build\obj\Release\Build.csprojResolveAssemblyReference.cache
+D:\My\OldWork\SainCov\Repo\LinkPrj\Link\Build\obj\Release\Build.dll
+D:\My\OldWork\SainCov\Repo\LinkPrj\Link\Build\obj\Release\Build.pdb
+D:\My\OldWork\SainCov\Repo\LinkPrj\Link\temp\Build.dll
+D:\My\OldWork\SainCov\Repo\LinkPrj\Link\temp\Build.pdb

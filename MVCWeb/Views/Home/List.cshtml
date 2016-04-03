@@ -1,0 +1,43 @@
+﻿@model List<MVCWeb.Controllers.Person>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Person Manager</h1>
+    <p class="lead">Listing and Adding Person Objects using KO and MVC</p>
+</div>
+
+<div class="row" id="viewroot">
+    <div class="col-md-4">
+        <h2>Persons</h2>
+        <ul>
+            <!-- ko foreach: Persons  -->
+            <li style="color: orange">
+                Name:<span data-bind="text: Name"></span>
+            </li>
+            <!-- /ko -->
+        </ul>
+        <div style="border: solid 2px silver" data-bind="with: PersonTemplate, visible: (PersonTemplate() != '')">
+            <h3>New Person</h3>
+            Name:<input type="text" id="Name" name="Name" data-bind="value: Name" /><br/>
+            Address: <input type="text" id="Addline1" name="AddressLine1" data-bind="value: Addresses[0].AddressLine1"/><br/>
+            City: <input type="text" id="City" name="City" data-bind="value: Addresses[0].City" /><br />
+            State: <select id="State" name="State" data-bind="options: $root.StatesList, selectedOptions: Addresses[0].State"></select><br />
+            <p><a class="btn btn-default" data-bind="click: $root.SavePerson" href="#">Save</a></p>
+        </div>
+        <p><a class="btn btn-default" data-bind="click: NewPerson" href="#">Create</a></p>
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        require(['Views/list', 'jquery'], function(page, jq) {
+            jq(document).ready(function() {
+                var options = @Html.Raw(Json.Encode(Model)); // works !! yeah!!
+                page.go(options); // Builds a VM for this View in a List.js file.
+            });
+        });
+    </script>
+}
+
