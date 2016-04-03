@@ -5,6 +5,7 @@
 		Microsoft.WebApplications.Targets	
 	-->
     <!-- 'removed default:' Condition="'$(NUnitProjectOutputDirectory)'==''"-->
+    <!--Note: dont put innerText value in new line as it gets consumed with the crlf causing invalid path error -->
     <NUnitProjectOutputDirectory>$(OutDir)_PublishedNUnitTests\$(MSBuildProjectName)</NUnitProjectOutputDirectory>
 	</PropertyGroup>
 
