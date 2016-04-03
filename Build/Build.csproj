@@ -44,6 +44,9 @@
     </None>
     <None Include="default.ps1" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="MSBuild\NUnitBuild.targets">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Notes\" />
